@@ -5,10 +5,8 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
-  , path = require('path')
-  , livereload = require('express-livereload');
+  , path = require('path');
 
 var app = express();
 
@@ -23,8 +21,6 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
 });
-
-//livereload(app, config={ exts:["jade", "html"], watchDir: "/views" });
 
 app.configure('development', function(){
   app.use(express.errorHandler());
