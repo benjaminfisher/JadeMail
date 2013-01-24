@@ -1,7 +1,7 @@
 JadeMail
 ========
 
-HTML Email creation tool built on top of the [http://expressjs.com/](Express.js) web server using [http://livejs.com/](Live.js) and Jade templating
+HTML Email creation tool built on top of the [Express.js](http://expressjs.com/) web server using [Live.js](http://livejs.com/) and [Jade](http://jade-lang.com/) templating.
 
 You will obviously need Node.js to use this tool. Jade is a dependancy of Express, so you don't need to install that seperately.
 
