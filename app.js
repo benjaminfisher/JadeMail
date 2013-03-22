@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -27,9 +26,15 @@ app.configure('development', function(){
   app.locals.pretty = true;
 });
 
-app.get('/', routes.index);
+app.all('*', function(req, res, next){
+  // console.log(req.method, routes.index);
+  if(req.method === 'GET'){
+    routes.index;
+  }
+  next();
+});
 
-app.head('/', routes.index);
+app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
